@@ -78,5 +78,6 @@ for item in reddit.inbox.stream(skip_existing=False):
       for index, word in enumerate(data[1:]):
         reply_message = reply_message + f"\n{word} {info['counts'][index]}\n"
         db[item.id] = item.author.name
+        send_message(item, reply_message)
     else:
       print("User does not exist")
