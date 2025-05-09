@@ -14,7 +14,7 @@ def send_message(item, reply_message):
     except Exception as e:
         print(e)
         return False
-
+    
 def already_commented(comment_id):
   if comment_id in db.keys():
       return True
