@@ -68,7 +68,6 @@ for item in reddit.inbox.stream(skip_existing=False):
 
   if len(data) >= 2 and len(data) <= 6 and not already_commented(item.id):
     name = data[0]
-
     if user_exists(name):
       print(f"Running: {name} Words {data[1:]}")
       info = count_words(name, data[1:])
